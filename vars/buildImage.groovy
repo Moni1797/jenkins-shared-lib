@@ -1,6 +1,8 @@
 #!/usr/bin/env groovy
 
+import org.company.utils.Docker
+
 def call(String tag) {
-    sh "docker build -t munibawan/demo-app:${tag} ."
+    new Docker(this).build(tag)
 }
 

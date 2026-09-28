@@ -1,5 +1,7 @@
+import org.company.utils.Docker
+
 def call(String tag) {
-    sh "docker push munibawan/demo-app:${tag}"
+    new Docker(this).push(tag)
 }
 
 
